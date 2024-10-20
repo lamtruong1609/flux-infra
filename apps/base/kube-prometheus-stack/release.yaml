@@ -4,7 +4,7 @@ metadata:
   name: kube-prometheus-stack
   namespace: monitoring
 spec:
-  interval: 10m0s
+  interval: 5m0s
   chart:
     spec:
       chart: kube-prometheus-stack
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-        namespace: flux-system
+        namespace: monitoring
   # Custom metrics of Flux
   valuesFrom:
     - kind: ConfigMap
