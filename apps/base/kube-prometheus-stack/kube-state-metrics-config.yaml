@@ -1,11 +1,4 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: monitoring
-  labels:
-    app.kubernetes.io/component: monitoring
----
-apiVersion: v1
 kind: ConfigMap
 metadata:
   name: flux-kube-state-metrics-config
