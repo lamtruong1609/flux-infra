@@ -16,9 +16,9 @@ metadata:
   name: monitoring-config
   namespace: monitoring
 spec:
-  dependsOn:
-    - name: kube-prometheus-stack
-      namespace: monitoring
+#  dependsOn:
+#    - name: kube-prometheus-stack
+#      namespace: monitoring
   interval: 5m
   prune: true
   sourceRef:
