@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: prometheus-community
-  namespace: flux-system
+  namespace: monitoring
 spec:
   interval: 10m0s
   url: https://prometheus-community.github.io/helm-charts
@@ -11,7 +11,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: flux-monitoring
-  namespace: flux-system
+  namespace: monitoring
 spec:
   interval: 30m
   url: https://github.com/fluxcd/flux2-monitoring-example
