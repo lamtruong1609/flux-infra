@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: monitoring
+spec:
+  values:
+    prometheus:
+      prometheusSpec:
+        # Staging 30d data retention
+        retention: 30d
+        # Resource should only have 200m, 200Mi
+        resources:
+          requests:
+            cpu: 200m
+            memory: 200Mi
