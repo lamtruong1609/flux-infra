@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: hello-app
+  namespace: app
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: ./charts/hello-app
+      version: '0.0.5'
+      sourceRef:
+        kind: GitRepository
+        name: hello-app-helm-repo
+        namespace: app
+      interval: 10m
+---
